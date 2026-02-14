@@ -1,0 +1,232 @@
+.page {
+    padding-bottom: var(--space-2xl);
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+}
+
+.headerTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+}
+
+.headerActions {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.iconButton {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 2px solid rgba(160, 77, 19, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* ===== Search Bar ===== */
+.searchSection {
+    padding: var(--space-sm) var(--space-lg);
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-md);
+    background: var(--color-bg);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-card);
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    color: var(--color-text);
+    outline: none;
+}
+
+.searchInput::placeholder {
+    color: var(--color-text-light);
+}
+
+/* ===== Trend Tags ===== */
+.tagSection {
+    margin-top: var(--space-xl);
+    padding: 0 var(--space-lg);
+}
+
+.sectionLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-md);
+}
+
+.tagCloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.tag:hover {
+    opacity: 0.8;
+}
+
+.tagHash {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* ===== Collections ===== */
+.collectionsSection {
+    margin-top: var(--space-2xl);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.seeAll {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.collectionsScroller {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    padding: 0 var(--space-lg);
+    padding-bottom: var(--space-md);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.collectionsScroller::-webkit-scrollbar {
+    display: none;
+}
+
+.collectionCard {
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.collectionInner {
+    width: 280px;
+    background: var(--color-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.collectionImage {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+.collectionImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collectionOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.collectionIcon {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collectionBody {
+    padding: 20px;
+}
+
+.collectionTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.collectionDesc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.collectionMeta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: var(--space-md);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+}

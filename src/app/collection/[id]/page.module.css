@@ -1,0 +1,319 @@
+.page {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-2xl));
+}
+
+/* ===== Hero ===== */
+.hero {
+    position: relative;
+    padding: 64px var(--space-lg) 48px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--theme-color) 8%, var(--color-bg-page));
+}
+
+.backButton {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-mocha);
+    backdrop-filter: blur(8px);
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.heroIcon {
+    width: 80px;
+    height: 80px;
+    background: var(--color-bg);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.heroTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-mocha);
+    margin-bottom: var(--space-md);
+    font-family: 'Newsreader', serif;
+}
+
+.baristaComment {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    max-width: 300px;
+    margin-bottom: var(--space-md);
+}
+
+.baristaLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    opacity: 0.7;
+}
+
+.heroBlur {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius-full);
+    opacity: 0.15;
+    filter: blur(48px);
+}
+
+/* ===== Timeline ===== */
+.timeline {
+    position: relative;
+    padding: 48px var(--space-lg);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.timelineLine {
+    position: absolute;
+    left: calc(var(--space-lg) + 6px);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom,
+            transparent,
+            var(--theme-color) 10%,
+            var(--theme-color) 90%,
+            transparent);
+    opacity: 0.3;
+}
+
+.timelineItem {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 48px;
+}
+
+.timelineMarker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timelineNumber {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.timelineDot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    border: 4px solid var(--color-bg-page);
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Mystery Card ===== */
+.mysteryCard {
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.cardImage {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardImageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.6));
+}
+
+/* Author */
+.cardAuthor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px 0;
+}
+
+.authorAvatar {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.authorName {
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex: 1;
+}
+
+.cardTime {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.6875rem;
+    color: var(--color-text-light);
+}
+
+/* Content */
+.cardTitle {
+    padding: 12px 20px 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--color-mocha);
+}
+
+.cardExcerpt {
+    padding: 8px 20px 0;
+    font-size: 0.8125rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Footer */
+.cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 0;
+}
+
+.cardStats {
+    display: flex;
+    gap: 12px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.difficultyPill {
+    font-size: 0.5625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+}
+
+.solveButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 16px 20px 20px;
+    width: calc(100% - 40px);
+    padding: 10px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: var(--radius-md);
+    transition: background 0.2s;
+}
+
+.solveButton:hover {
+    opacity: 0.8;
+}
+
+/* ===== CTA ===== */
+.cta {
+    padding: 0 var(--space-lg);
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaPrimary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    font-weight: 700;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    transition: transform 0.1s;
+}
+
+.ctaSecondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+}
+
+.ctaCredit {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    margin-top: var(--space-md);
+    font-style: italic;
+}

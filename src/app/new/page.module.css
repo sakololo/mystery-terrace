@@ -1,0 +1,309 @@
+.page {
+    padding: var(--space-md);
+}
+
+/* ===== Header (旧レイアウト) ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+}
+
+.cancelButton {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+.pageTitle {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.submitButton {
+    padding: var(--space-xs) var(--space-md);
+    background: rgba(75, 54, 33, 0.12);
+    color: rgba(75, 54, 33, 0.35);
+    border: none;
+    border-radius: var(--radius-full);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.submitButton:disabled {
+    opacity: 1;
+}
+
+.submitButtonActive {
+    background: #2d6a3f;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(45, 106, 63, 0.3);
+}
+
+/* ===== Icon Picker (旧レイアウト) ===== */
+.iconPicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+}
+
+.iconSelected {
+    font-size: 1.8rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.iconHint {
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+}
+
+/* ===== Flavor Chips (新機能) ===== */
+.flavorSection {
+    margin-bottom: var(--space-lg);
+}
+
+.flavorLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgba(75, 54, 33, 0.4);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+.flavorScroller {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.flavorScroller::-webkit-scrollbar {
+    display: none;
+}
+
+.flavorChip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-text-light);
+    background: transparent;
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.flavorChipActive {
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Title Input (旧サイズ) ===== */
+.titleInput {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--color-text-light);
+    background: transparent;
+    font-family: var(--font-ui);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    padding: var(--space-sm) 0;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.titleInput:focus {
+    border-bottom-color: var(--color-text);
+}
+
+.titleInput::placeholder {
+    color: var(--color-text-light);
+    font-weight: 700;
+}
+
+.charCount {
+    display: block;
+    text-align: right;
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+/* ===== Story Input (旧スタイル: カード型) ===== */
+.storyInput {
+    width: 100%;
+    min-height: 160px;
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border: none;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    margin-bottom: var(--space-lg);
+}
+
+.storyInput::placeholder {
+    color: var(--color-text-light);
+}
+
+/* ===== Polaroid Preview (新機能) ===== */
+.polaroidPreview {
+    position: relative;
+    display: inline-block;
+    background: white;
+    padding: 8px;
+    padding-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    margin-bottom: var(--space-lg);
+    max-width: 200px;
+}
+
+.polaroidImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1px;
+    filter: grayscale(10%) sepia(5%);
+}
+
+.polaroidCaption {
+    margin-top: 8px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.6rem;
+    color: rgba(75, 54, 33, 0.35);
+    font-style: italic;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.polaroidRemove {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    background: rgba(75, 54, 33, 0.85);
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Settings (旧レイアウト) ===== */
+.settingsSection {
+    margin-bottom: var(--space-lg);
+}
+
+.settingsTitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+}
+
+.settingRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+}
+
+.settingLabel {
+    font-size: 0.85rem;
+    color: var(--color-text);
+}
+
+.pillGroup {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.pill {
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1.5px solid var(--color-text-light);
+    color: var(--color-text-light);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pillActive {
+    background: var(--color-text);
+    border-color: var(--color-text);
+    color: #FFFFFF;
+}
+
+/* ===== Photo Section (旧位置, 新デザイン: 控えめ) ===== */
+.photoSection {
+    margin-bottom: var(--space-xl);
+}
+
+.photoButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-bg);
+    border: 2px dashed var(--color-text-light);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    color: var(--color-text-light);
+}
+
+.photoButton:hover {
+    opacity: 1;
+}
+
+.photoLabel {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}

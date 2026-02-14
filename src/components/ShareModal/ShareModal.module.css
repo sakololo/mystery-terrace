@@ -1,0 +1,283 @@
+/* ===== Overlay — Mocha Glass ===== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(60, 42, 33, 0.4);
+    z-index: 200;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ===== Bottom Sheet ===== */
+.sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 201;
+    background: var(--color-bg-page);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.handleWrap {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0 24px;
+}
+
+.handle {
+    width: 48px;
+    height: 5px;
+    background: rgba(160, 77, 19, 0.2);
+    border-radius: var(--radius-full);
+}
+
+.sheetTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+}
+
+.sheetSubtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: var(--space-lg);
+}
+
+/* ===== CSS Snap Carousel ===== */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-xl);
+    padding: 0 40px var(--space-xl);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.cardSnap {
+    flex: 0 0 auto;
+    width: 240px;
+    scroll-snap-align: center;
+}
+
+.card {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.cardLabel {
+    margin-top: var(--space-md);
+    text-align: center;
+}
+
+.cardLabelText {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-mocha-dark);
+}
+
+.carouselSpacer {
+    flex: 0 0 16px;
+}
+
+/* ===== Premium Design ===== */
+.card_premium {
+    background: white;
+    border: 1px solid rgba(160, 77, 19, 0.1);
+    padding: var(--space-xl);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.premiumGlow {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    background: radial-gradient(circle at top right, var(--color-gold), transparent 60%);
+}
+
+.premiumDivider {
+    width: 100%;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(160, 77, 19, 0.15);
+    display: flex;
+    justify-content: center;
+}
+
+.premiumBody {
+    z-index: 1;
+}
+
+.premiumTitle {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-mocha-dark);
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+.premiumLabel {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+.premiumFooter {
+    width: 100%;
+    z-index: 1;
+}
+
+.premiumLine {
+    height: 1px;
+    width: 100%;
+    background: rgba(160, 77, 19, 0.15);
+    margin-bottom: 8px;
+}
+
+.premiumInvite {
+    font-size: 0.5625rem;
+    color: rgba(60, 42, 33, 0.4);
+    font-style: italic;
+}
+
+/* ===== Casual Design ===== */
+.card_casual {
+    background: #e6ccb2;
+    border: 1px solid rgba(127, 85, 57, 0.15);
+    padding: var(--space-xl);
+    justify-content: space-between;
+}
+
+.casualDecoTop {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    color: var(--color-mocha-dark);
+}
+
+.casualDecoBottom {
+    position: absolute;
+    bottom: var(--space-xl);
+    left: var(--space-xl);
+    color: var(--color-mocha-dark);
+}
+
+.casualBody {
+    z-index: 1;
+}
+
+.casualTitle {
+    font-family: 'Kalam', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7f5539;
+}
+
+.casualText {
+    font-size: 0.8rem;
+    color: rgba(60, 42, 33, 0.8);
+    line-height: 1.6;
+    font-weight: 500;
+    margin-top: var(--space-md);
+}
+
+.casualFooterCard {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius-md);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    z-index: 1;
+}
+
+.casualFooterText {
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: var(--color-mocha-dark);
+}
+
+/* ===== Photo Design ===== */
+.card_photo {
+    background: #222;
+}
+
+.photoImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photoOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-xl);
+}
+
+.photoTitle {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.photoSubtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.625rem;
+    letter-spacing: 0.05em;
+}
+
+/* ===== Share Button ===== */
+.shareButtonWrap {
+    padding: var(--space-sm) var(--space-lg) var(--space-2xl);
+}
+
+.shareButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 18px;
+    background: var(--color-primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: var(--radius-full);
+    font-family: var(--font-ui);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(160, 77, 19, 0.3);
+}

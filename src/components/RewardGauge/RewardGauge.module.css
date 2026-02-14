@@ -1,0 +1,143 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    margin: 0 var(--space-lg) var(--space-xl);
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(160, 77, 19, 0.05);
+    box-shadow: var(--shadow-card);
+}
+
+/* === Cup Visual === */
+.cupContainer {
+    position: relative;
+    width: 96px;
+    height: 112px;
+    flex-shrink: 0;
+}
+
+.cupBody {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+}
+
+.cupInner {
+    position: relative;
+    width: 60px;
+    height: 80px;
+    background: #f0edea;
+    border-radius: 0 0 12px 12px;
+    border-left: 2px solid #e0ddd8;
+    border-right: 2px solid #e0ddd8;
+    border-bottom: 2px solid #e0ddd8;
+    overflow: hidden;
+}
+
+.cupFill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--color-primary), var(--color-gold));
+    border-radius: 0 0 10px 10px;
+}
+
+.grainOverlay {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    color: white;
+    z-index: 1;
+}
+
+.cupHandle {
+    position: absolute;
+    right: -14px;
+    top: 20px;
+    width: 14px;
+    height: 24px;
+    border: 2px solid #e0ddd8;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+}
+
+.steamContainer {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.steam {
+    width: 3px;
+    height: 16px;
+    background: var(--color-primary);
+    opacity: 0.2;
+    border-radius: var(--radius-full);
+}
+
+/* === Info === */
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.labelRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.label {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+}
+
+.beans {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-mocha-dark);
+    margin-bottom: 4px;
+}
+
+.desc {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.segmentTrack {
+    display: flex;
+    gap: 4px;
+}
+
+.segment {
+    flex: 1;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: rgba(160, 77, 19, 0.12);
+}
+
+.segmentFilled {
+    background: var(--color-primary);
+}

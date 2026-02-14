@@ -1,0 +1,212 @@
+/* ===== Full-screen Cafe Terrace Backdrop ===== */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.bgPhoto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bgOverlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at center, rgba(60, 42, 26, 0.3) 0%, rgba(30, 20, 10, 0.7) 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* ===== Scrollable Card Container ===== */
+.cardScroller {
+    position: fixed;
+    inset: 0;
+    z-index: 301;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ===== Invitation Card ===== */
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 253, 248, 0.97);
+    border-radius: 24px;
+    padding: 40px 28px 32px;
+    box-shadow:
+        0 24px 80px rgba(30, 20, 10, 0.4),
+        0 4px 16px rgba(30, 20, 10, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    flex-shrink: 0;
+}
+
+/* ===== Header ===== */
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logoIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 9999px;
+    background: rgba(75, 54, 33, 0.08);
+    color: #4b3621;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+
+.brand {
+    font-size: 0.5625rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: rgba(75, 54, 33, 0.35);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Decorative divider */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.dividerDot {
+    width: 4px;
+    height: 4px;
+    border-radius: 9999px;
+    background: rgba(75, 54, 33, 0.2);
+}
+
+.dividerLine {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(75, 54, 33, 0.2), transparent);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3c2a1a;
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    color: rgba(75, 54, 33, 0.55);
+    line-height: 1.8;
+}
+
+/* ===== Manner List ===== */
+.mannerList {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.mannerItem {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.mannerIcon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(75, 54, 33, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b3621;
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.mannerContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.mannerNumber {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: rgba(75, 54, 33, 0.3);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.mannerTitle {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #3c2a1a;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.mannerBody {
+    font-size: 0.6875rem;
+    color: rgba(75, 54, 33, 0.6);
+    line-height: 1.75;
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+}
+
+.footerNote {
+    font-size: 0.625rem;
+    color: rgba(75, 54, 33, 0.35);
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.acceptButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 32px;
+    background: #3c2a1a;
+    color: #fffdf8;
+    border: none;
+    border-radius: 9999px;
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(60, 42, 26, 0.3);
+    letter-spacing: 0.04em;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.acceptButton:hover {
+    background: #4b3621;
+    box-shadow: 0 12px 32px rgba(60, 42, 26, 0.35);
+}

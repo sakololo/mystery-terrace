@@ -1,0 +1,376 @@
+.page {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-2xl));
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg) var(--space-lg) var(--space-md);
+}
+
+.headerTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-mocha-dark);
+}
+
+.settingsIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+}
+
+/* ===== Profile ===== */
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--space-xl);
+}
+
+.avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: var(--radius-full);
+    background: var(--color-bg);
+    border: 3px solid var(--color-primary-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    box-shadow: 0 4px 16px rgba(160, 77, 19, 0.1);
+}
+
+.userName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-mocha-dark);
+    margin-bottom: 2px;
+}
+
+.handle {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+}
+
+.tenure {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: rgba(160, 77, 19, 0.08);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-md);
+}
+
+.bio {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 280px;
+    margin-bottom: var(--space-lg);
+}
+
+.editButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    border: 1px solid rgba(160, 77, 19, 0.3);
+    padding: 8px 20px;
+    border-radius: var(--radius-full);
+    transition: background 0.2s;
+}
+
+.editButton:hover {
+    background: rgba(160, 77, 19, 0.05);
+}
+
+/* ===== Stats Cards ===== */
+.statsSection {
+    padding: 0 0 var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--space-xl);
+}
+
+.statsScroller {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    padding: 0 var(--space-lg);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.statsScroller::-webkit-scrollbar {
+    display: none;
+}
+
+.statCard {
+    flex: 0 0 auto;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-lg) var(--space-md);
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.statValue {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-mocha-dark);
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.5625rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ===== Badges ===== */
+.badgeSection {
+    padding: 0 var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--space-xl);
+}
+
+.sectionTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-mocha-dark);
+    margin-bottom: var(--space-lg);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+}
+
+.badgeGrid {
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+}
+
+.badgeGrid::-webkit-scrollbar {
+    display: none;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.badgeLocked {
+    opacity: 0.35;
+}
+
+.badgeIcon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badgeLabel {
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ===== Highlight Deductions ===== */
+.highlightSection {
+    padding: 0 var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--space-xl);
+}
+
+.highlightCard {
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    margin-bottom: var(--space-md);
+}
+
+.highlightAward {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background: rgba(160, 77, 19, 0.08);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-sm);
+}
+
+.highlightCase {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.highlightText {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-mocha-dark);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+}
+
+.highlightMeta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+/* ===== My Posts ===== */
+.postsSection {
+    padding: 0 var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--space-xl);
+}
+
+.postCount {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.postItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.postItem:last-child {
+    border-bottom: none;
+}
+
+.postContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.postTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-mocha-dark);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.postMeta {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.postStat {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.6875rem;
+    color: var(--color-text-light);
+}
+
+.postStatus {
+    font-size: 0.5625rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(17, 212, 147, 0.1);
+    color: #059669;
+    white-space: nowrap;
+    margin-left: var(--space-md);
+}
+
+.draft {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-text-light);
+}
+
+.draftCard {
+    border: 1.5px dashed rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: none;
+}
+
+/* ===== Settings ===== */
+.settingsSection {
+    padding: 0 var(--space-lg);
+}
+
+.settingsItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    width: 100%;
+    padding: var(--space-md) 0;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: opacity 0.2s;
+}
+
+.settingsItem:last-child {
+    border-bottom: none;
+}
+
+.settingsItem:hover {
+    opacity: 0.7;
+}
+
+.settingsDanger {
+    color: #dc2626;
+}
+
+.settingsLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
